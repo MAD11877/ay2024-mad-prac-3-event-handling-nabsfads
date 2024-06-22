@@ -15,9 +15,6 @@ import androidx.core.view.WindowInsetsCompat;
 
 import java.util.Random;
 
-import sg.edu.np.mad.madpractical3.MainActivity;
-import sg.edu.np.mad.madpractical3.R;
-
 public class ListActivity extends AppCompatActivity {
 
     @Override
@@ -35,11 +32,9 @@ public class ListActivity extends AppCompatActivity {
             alert.setPositiveButton("View", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
-                    // Generate a random integer
                     Random random = new Random();
-                    int randomNumber = random.nextInt(100); // Change 100 to your desired range
+                    int randomNumber = random.nextInt(100);
 
-                    // Launch MainActivity and pass the random integer
                     Intent intent = new Intent(ListActivity.this, MainActivity.class);
                     intent.putExtra("randomNumber", randomNumber);
                     startActivity(intent);
@@ -49,7 +44,6 @@ public class ListActivity extends AppCompatActivity {
             alert.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
-                    // Cancel button clicked, do nothing
                 }
             });
 
